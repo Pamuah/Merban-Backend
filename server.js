@@ -12,6 +12,8 @@ import vehicleRoutes from "./src/routes/vehicle_Routes.js";
 import adminHistory from "./src/routes/adminHistory_Routes.js";
 import commentRoutes from "./src/routes/comment_Routes.js";
 import seedRoutes from "./src/routes/seedUser_Routes.js";
+import cors from "cors";
+
 dotenv.config();
 
 const app = express();
@@ -19,9 +21,13 @@ const app = express();
 // connect to MongoDB
 connectDB();
 
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://octopus-app-qejo4.ondigitalocean.app",
+    credentials: true,
+  }),
+);
 app.use(express.json());
-
 app.use("/api/auth", authRoutes);
 app.use("/api/vehicle-requests", vehicleRequestRoutes);
 app.use("/api/manager-approvals", managerApprovalRoutes);
