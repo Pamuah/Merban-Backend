@@ -12,7 +12,6 @@ import vehicleRoutes from "./src/routes/vehicle_Routes.js";
 import adminHistory from "./src/routes/adminHistory_Routes.js";
 import commentRoutes from "./src/routes/comment_Routes.js";
 import seedRoutes from "./src/routes/seedUser_Routes.js";
-import cors from "cors";
 
 dotenv.config();
 
