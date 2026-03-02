@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-//changes made
+
 const commentSchema = new mongoose.Schema(
   {
     employeeId: {
